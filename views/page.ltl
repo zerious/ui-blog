@@ -1,0 +1,23 @@
+appName = 'My Blog'
+posts = state.posts
+
+html
+  head
+    title
+      if title
+        : ${title} - ${appName}
+      else
+        : ${appName}
+  body
+    #top
+      h1
+        a#logo(onclick="blog.load()") ${appName}
+
+    #side
+      h3 Posts
+      for post in posts
+        a(href="#={post.id}") ${post.when} - ${post.title}
+      p
+        button(onclick="blog.edit()") New Post
+
+    #content ={block}

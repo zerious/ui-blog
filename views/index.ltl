@@ -1,0 +1,13 @@
+@page
+
+  for post in posts
+    a(name="={post.id}")
+    .post
+      h2 ${post.title}
+        space
+        i.when - ${post.when}
+      : ={post.text}
+      p
+        button(onclick="blog.edit(={post.id})") Edit
+        space
+        button(onclick="blog.remove(={post.id})") Delete

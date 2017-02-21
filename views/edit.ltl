@@ -1,0 +1,23 @@
+@page
+
+  form#edit
+
+    if post.id
+      h1 Edit Post
+    else
+      h2 New Post
+
+    .field
+      label(for="title") Title
+      input#title(type="text" name="title" value="${post.title}" style="width:100%")
+
+    .field
+      label(for="text") Text
+      textarea#text(name="text" rows="20") ${post.text}
+
+    .field
+      button(onclick="blog.update(={post.id});return false")
+        if post.id
+          : Update Post
+        else
+          : Create Post

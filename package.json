@@ -1,0 +1,31 @@
+{
+  "name": "ui-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "mvn jetty:run",
+    "test": "./node_modules/.bin/exam",
+    "postinstall": "ls node_modules/chug/node_modules/ltl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerious/ui-blog.git"
+  },
+  "author": "Sam Eubank <sameubank@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/zerious/ui-blog/issues"
+  },
+  "homepage": "https://github.com/zerious/ui-blog#readme",
+  "dependencies": {
+    "chug": "^0.4.1",
+    "cute": "0.0.4",
+    "lighter-json": "^1.0.2",
+    "ltl": "^0.3.1"
+  },
+  "devDependencies": {
+    "exam": "^2.0.0",
+    "lighter-mime": "^1.0.0"
+  }
+}
