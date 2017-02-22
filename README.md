@@ -69,7 +69,13 @@ fastest experience, use the prod endpoint:
 
 ## Future
 
-#### Replace Jetty with Node
+#### Internationalization
+Not sure if this is helpful for a simple blog, but it's a possibility.
+
+#### Tests
+I could add UI tests with SouceLabs.
+
+#### Replace Jetty with Node?
 The blog service is extremely simple, and it could be easily re-created in
 node. The installation instructions could be far easier, and the server output
 would be less verbose.
