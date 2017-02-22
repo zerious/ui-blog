@@ -24,9 +24,5 @@
     "cute": "0.0.4",
     "lighter-json": "^1.0.2",
     "ltl": "^0.3.1"
-  },
-  "devDependencies": {
-    "exam": "^2.0.0",
-    "lighter-mime": "^1.0.0"
   }
 }
