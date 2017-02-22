@@ -13,3 +13,6 @@
         button(onclick="blog.edit(={post.id})") Edit
         space
         button(onclick="blog.remove(={post.id})") Delete
+
+  .post
+    button(onclick="blog.drop()") Delete All

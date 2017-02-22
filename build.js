@@ -37,10 +37,8 @@ var cutePattern = /(\n?)(Cute)\.([$_a-zA-Z0-9]+)(\s*=)?/g
 chug.then(function () {
   var css = pubs.assets[0].minify().minifiedContent
   var js = pubs.assets[1].replace('BLOG_CSS', css)
-  js.content = views + js.content
-  var lib = cute.assets[0]
-  chug([js, lib])
-    .concat()
+  js.content = cute.assets[0].content + views + js.content
+  chug(js)
     .replace(cutePattern, function (match, br, lib, key, equals) {
       var name = lib + '_' + key
       var word = br ? 'var ' : ''

@@ -64,11 +64,22 @@ function updatePost (id) {
 
 /**
  * Remove a specified post.
+ * TODO: Ask for confirmation.
  *
  * @param  {Number} id  The ID number of the post.
  */
 function removePost (id) {
-  Cute.get(api + id, null, function (response) {
+  Cute.get(api + id, null, function () {
+    loadPosts()
+  })
+}
+
+/**
+ * Remove all posts.
+ * TODO: Ask for confirmation.
+ */
+function dropPosts () {
+  Cute.get(api, null, function () {
     loadPosts()
   })
 }
@@ -99,5 +110,6 @@ window.blog = {
   load: loadPosts,
   edit: editPost,
   update: updatePost,
-  remove: removePost
+  remove: removePost,
+  drop: dropPosts
 }
