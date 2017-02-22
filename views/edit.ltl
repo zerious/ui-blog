@@ -5,7 +5,7 @@
   form#edit
 
     if post.id
-      h1 Edit Post
+      h2 Edit Post
     else
       h2 New Post
 
