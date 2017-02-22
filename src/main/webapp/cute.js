@@ -1,3 +1,5 @@
+// Author: Sam Eubank <sameubank@gmail.com>
+
 /**   ___     _              __   __  _ _
  *   / __|  _| |_ ___  __ __/  \ /  \| | |
  *  | (_| || |  _/ -_) \ V / () | () |_  _|
@@ -35,23 +37,9 @@ var Cute = {}
 Cute.version = '0.0.4'
 
 /* istanbul ignore next */
-//+env:commonjs
-if (typeof exports === 'object') {
-  module.exports = Cute
-}
-//-env:commonjs
-//+env:amd
-else if (typeof define === 'function' && define.amd) {
-  define(function () {
-    return Cute
-  });
-}
-//-env:amd
-//+env:window
-else {
-  this.Cute = Cute
-}
-//-env:window
+
+
+
 
 /**
  * Get an XMLHttpRequest object (or ActiveX object in old IE).
@@ -1313,9 +1301,7 @@ Cute.parse = function (js, alternative) {
     js = eval.J
     /* eslint-enable */
   } catch (ignore) {
-    //+env:debug
-    Cute.error('[Cute] Could not parse JS: ' + js)
-    //-env:debug
+    
     js = alternative
   }
   return js
@@ -1337,44 +1323,7 @@ Cute.info = Cute.no
 Cute.log = Cute.no
 Cute.trace = Cute.no
 
-//+env:debug
 
-/**
- * Log values to the console, if it's available.
- */
-Cute.error = function () {
-  Cute.apply(window.console, 'error', arguments)
-}
-
-/**
- * Log values to the console, if it's available.
- */
-Cute.warn = function () {
-  Cute.apply(window.console, 'warn', arguments)
-}
-
-/**
- * Log values to the console, if it's available.
- */
-Cute.info = function () {
-  Cute.apply(window.console, 'info', arguments)
-}
-
-/**
- * Log values to the console, if it's available.
- */
-Cute.log = function () {
-  Cute.apply(window.console, 'log', arguments)
-}
-
-/**
- * Log values to the console, if it's available.
- */
-Cute.trace = function () {
-  Cute.apply(window.console, 'trace', arguments)
-}
-
-//-env:debug
 
 /**
  * If the argument is numeric, return a number, otherwise return zero.

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "node build",
     "start": "mvn jetty:run",
     "test": "./node_modules/.bin/exam",
     "postinstall": "ls node_modules/chug/node_modules/ltl"

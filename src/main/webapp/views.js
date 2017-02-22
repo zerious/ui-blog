@@ -1,3 +1,5 @@
+// Author: Sam Eubank <sameubank@gmail.com>
+
 var views = {$:function (v) {
       return (!v && v !== 0 ? '' : (typeof v === 'object' ? JSON.stringify(v) || '' : '' + v)).replace(/</g, '&lt;')
     },"&":undefined,edit:function (scope,state){state=state||scope;var cache=this;var output=''+cache['page']({block:function(){var cache=this;function ltl0(v) {
