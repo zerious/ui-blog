@@ -4,6 +4,9 @@ This implementation is focused on producing highly-minified JavaScript and
 limiting the number of front-end assets that are loaded, for the purpose of
 producing an extremely fast experience.
 
+The source files found in the [public](https://github.com/zerious/ui-blog/tree/master/public) and [views](https://github.com/zerious/ui-blog/tree/master/views) directories are used
+to build the assets that are found in [src/main/webapp](https://github.com/zerious/ui-blog/tree/master/src/main/webapp).
+
 I used several libraries of my own:
 
 * [chug](https://github.com/lighterio/chug) - An asset builder.
@@ -73,7 +76,7 @@ fastest experience, use the prod endpoint:
 Not sure if this is helpful for a simple blog, but it's a possibility.
 
 #### Tests
-I could add UI tests with SouceLabs.
+I could add UI tests with SauceLabs.
 
 #### Replace Jetty with Node?
 The blog service is extremely simple, and it could be easily re-created in
