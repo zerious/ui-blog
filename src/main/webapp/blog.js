@@ -9,6 +9,7 @@ var state = {}
 // Load the page.
 loadPosts()
 
+// Placeholder for CSS insertion.
 Cute.css("BLOG_CSS") // eslint-disable-line
 
 /**
@@ -37,7 +38,6 @@ function editPost (id) {
   }
   Cute.get(api + id, function (response) {
     state.post = response.post
-    console.log(state.post)
     renderView('edit')
   })
 }
@@ -56,7 +56,6 @@ function updatePost (id) {
   var data = 'title=' + Cute.encode(title) +
     '&text=' + Cute.encode(text) +
     '&timestamp' + Cute.encode(Cute.stamp())
-  console.log(data)
   Cute.get(api + id, data, function (response) {
     loadPosts()
   })
